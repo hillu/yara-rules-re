@@ -27,9 +27,10 @@ rule abcd {
 ## Mandelbrot set renderer
 
 [mandelbrot.yac](mandelbrot.yac) is a port of the Mandelbrot ASCII
-rendering program found at the top of [Professor Ken
-Perlin's](https://mrl.nyu.edu/~perlin) homepage. (I found it via
-[Rosetta Code](http://rosettacode.org/wiki/Mandelbrot_set#ASCII).)
+rendering program written in obfuscated C that can be found at the top
+of [Professor Ken Perlin's](https://mrl.nyu.edu/~perlin) homepage. (I
+found it via [Rosetta
+Code](http://rosettacode.org/wiki/Mandelbrot_set#ASCII).)
 
 ``` C
 main(k){float i,j,r,x,y=-16;while(puts(""),y++<15)for(x
