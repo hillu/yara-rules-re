@@ -1,0 +1,36 @@
+From 10cb61b96e01441dd6c181d49fbe2b15c8f4805b Mon Sep 17 00:00:00 2001
+From: Hilko Bengen <bengen@hilluzination.de>
+Date: Wed, 24 Jun 2020 17:42:08 +0200
+Subject: [PATCH] implement tests.putchar(c)
+
+---
+ libyara/modules/tests/tests.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/libyara/modules/tests/tests.c b/libyara/modules/tests/tests.c
+index 70c816de..5e4c7277 100644
+--- a/libyara/modules/tests/tests.c
++++ b/libyara/modules/tests/tests.c
+@@ -109,6 +109,11 @@ define_function(foobar)
+   return_string("oops")
+ }
+ 
++define_function(my_putchar)
++{
++  return_integer( putchar( (char)integer_argument(1) ) );
++}
++
+ begin_declarations;
+ 
+   begin_struct("constants");
+@@ -153,6 +158,7 @@ begin_declarations;
+   declare_function("length", "s", "i", length);
+   declare_function("empty", "", "s", empty);
+   declare_function("foobar", "i", "s", foobar);
++  declare_function("putchar", "i", "i", my_putchar);
+ 
+ end_declarations;
+ 
+-- 
+2.20.1
+

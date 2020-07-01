@@ -7,7 +7,8 @@ ReversingLabs'
 online event.
 
 - [Bytecode dumper/disassembler](disasm)
-- Bytecode assembler, with examples (not yet published, needs more debugging)
+- Bytecode assembler (not yet published, needs more debugging)
+- [Examples](examples)
 
 ## Author
 
